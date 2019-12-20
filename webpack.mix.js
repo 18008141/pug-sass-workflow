@@ -16,7 +16,7 @@ mix.setPublicPath('dist');
 
 mix.js('src/js/script.js', 'dist/assets/js/')
 .sass('src/scss/style.scss', 'dist/assets/css/')
-.pug('src/views/*.pug', '../../dist/');
+.pug('src/views/*.pug', '../../dist/', { pug: { pretty: true } });
 
 mix.browserSync({proxy: false, files: ['src/**/*'], server: {baseDir: 'dist/'}}); // browser-sync
 mix.copyDirectory('src/img/', 'dist/assets/img');
